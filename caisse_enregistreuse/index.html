@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Caisse enregistreuse</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Caisse enregistreuse</h1>
+        <div id="menu" class="grid-container">
+            <!-- Adicione seus itens de menu aqui -->
+            <div class="item grid-item" data-name="Burger" data-price="5.00" data-stock="20"><p>Burger - €5.00</p>
+            </div>
+            <div class="item grid-item" data-name="Kebab" data-price="5.00" data-stock="30"><p>Kebab - €5.00</p>
+            </div>
+            <div class="item grid-item" data-name="Menu Burguer" data-price="8.00" data-stock="20"><p>Menu Burguer - €8.00</p>
+            </div>
+            <div class="item grid-item" data-name="Menu Kebab" data-price="9.00" data-stock="30"><p>Menu Kebab - €9.00</p>
+            </div>
+            <div class="item grid-item" data-name="Boisson 33c" data-price="2.00" data-stock="20"><p>Boisson 33cl - €2.00</p>
+            </div>
+            <div class="item grid-item" data-name="Boisson 50cl" data-price="2.50" data-stock="30"><p>Boisson 50cl - €2.50</p>
+            </div>
+            <div class="item grid-item" data-name="Dessert" data-price="2.50" data-stock="20"><p>Dessert - €2.50</p>
+            </div>
+            <div class="item grid-item" data-name="Steak Frites" data-price="5.50" data-stock="30"><p>Steak Frites - €5.50</p>
+            </div>
+            <!-- Adicione mais itens conforme necessário -->
+        </div>
+        <div id="cart" class="grid-container">
+            <div class="cart-container">
+                <h2>Panier</h2>
+                <ul id="cart-items"></ul>
+                <p class="total">Total: €<span id="total">0.00</span></p>
+            </div>
+        </div>
+        <div id="button-bottom">
+            <button onclick="checkout()">Finaliser commande</button>
+            <button id="report-button" class="grid-item" onclick="openModal()">Créer un Rapport journalier</button>
+            <button onclick="cancelTransaction()">Annuler la Commande</button>
+        </div>
+
+        <!-- Add this modal section -->
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h3>Rapport Journalier</h3>
+                <ul id="order-list"></ul>
+                <p id="grand-total">Total Général: €<span id="totalAllOrders">0.00</span></p>
+            </div>
+        </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
