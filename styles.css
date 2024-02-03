@@ -17,7 +17,7 @@ body {
 }
 
 /* if its mobile the grid will be repeat 6 */
-@media (max-width: 739px) {
+@media (max-width: 600px) {
   .grid-container {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -26,6 +26,7 @@ body {
    min-width: 100%;
   }
 }
+
 
 h1 {
   color: #fff;
